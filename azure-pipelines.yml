@@ -30,24 +30,6 @@ stages:
             inputs:
               provider: 'azurerm'
               command: 'validate'
-  - stage: tfdeploy
-    condition:  succeeded('tfvalidate')
-    dependsOn:  tfvalidate
-    jobs:
-      - job:  apply
-        steps:
-          - task: TerraformInstaller@1
-            inputs:
-              terraformVersion: 'latest'
-          - task: TerraformTaskV4@4
-            inputs:
-              provider: 'azurerm'
-              command: 'init'
-              backendServiceArm: 'myfirstserviceconnection'
-              backendAzureRmResourceGroupName: 'storagerg'
-              backendAzureRmStorageAccountName: 'ankustorage5591'
-              backendAzureRmContainerName: 'terraform'
-              backendAzureRmKey: 'terraform.tfstate'
           - task: TerraformTaskV4@4
             inputs:
               provider: 'azurerm'
