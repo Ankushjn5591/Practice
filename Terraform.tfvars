@@ -1,2 +1,2 @@
-rgname = "ankush-rg"
+rgname = "ankushrg"
 
