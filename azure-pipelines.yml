@@ -57,8 +57,10 @@ stages:
             inputs:
               provider: 'azurerm'
               command: 'plan'
+              environmentServiceNameAzureRM: 'myfirstserviceconnection'
           - task: TerraformTaskV4@4
             inputs:
               provider: 'azurerm'
               command: 'apply'
+              environmentServiceNameAzureRM: 'myfirstserviceconnection'
 
