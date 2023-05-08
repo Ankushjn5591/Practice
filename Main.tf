@@ -8,7 +8,7 @@ resource "azurerm_resource_group" "rg" {
 }
 
 data "azurerm_key_vault" "key" {
-  name         = "firstkeyvault5591 "
+  name         = "firstkeyvault5591"
 }
 
 data "azurerm_key_vault_secret" "keysecret" {
