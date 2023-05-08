@@ -27,10 +27,10 @@ stages:
               provider: 'azurerm'
               command: 'init'
               backendServiceArm: 'myfirstserviceconnection'
-              backendAzureRmResourceGroupName: 'storagerg'
-              backendAzureRmStorageAccountName: 'ankustorage5591'
+              backendAzureRmResourceGroupName: 'Storagerg'
+              backendAzureRmStorageAccountName: 'storageaccount5591'
               backendAzureRmContainerName: 'tfstate'
-              backendAzureRmKey: 'devpipeline.tfstate'
+              backendAzureRmKey: 'devpipeline.terraform.tfstate'
           - task: TerraformTaskV4@4
             inputs:
               provider: 'azurerm'
@@ -49,10 +49,10 @@ stages:
               provider: 'azurerm'
               command: 'init'
               backendServiceArm: 'myfirstserviceconnection'
-              backendAzureRmResourceGroupName: 'storagerg'
-              backendAzureRmStorageAccountName: 'ankustorage5591'
+              backendAzureRmResourceGroupName: 'Storagerg'
+              backendAzureRmStorageAccountName: 'storageaccount5591'
               backendAzureRmContainerName: 'tfstate'
-              backendAzureRmKey: 'devpipeline.tfstate'
+              backendAzureRmKey: 'devpipeline.terraform.tfstate'
           - task: TerraformTaskV4@4
             inputs:
               provider: 'azurerm'
