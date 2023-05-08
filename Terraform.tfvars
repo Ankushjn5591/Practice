@@ -1,4 +1,4 @@
 rgname = "ankush-rg"
-rglocation = "East US"
+rglocation = "West Europe"
 vnetname = "vnet1"
 subname = "subnet1"
