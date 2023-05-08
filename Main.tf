@@ -22,6 +22,6 @@ terraform {
     storage_account_name = "storageaccount5591"
     container_name       = "tfstate"
     key                  = "devpipeline.terraform.tfstate"
-    access_key           = azurerm_key_vault_secret.keysecret.value
+    access_key           = data.azurerm_key_vault_secret.keysecret.value
   }
 }
