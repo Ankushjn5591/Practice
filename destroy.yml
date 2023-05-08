@@ -14,32 +14,9 @@ pool:
   vmImage: ubuntu-latest
 
 stages:
-  - stage:  tfvalidate
-    jobs:
-      - job:  validate
-        continueOnError: false
-        steps:
-          - task: TerraformInstaller@1
-            inputs:
-              terraformVersion: 'latest'
-          - task: TerraformTaskV4@4
-            inputs:
-              provider: 'azurerm'
-              command: 'init'
-              backendServiceArm: 'myfirstserviceconnection'
-              backendAzureRmResourceGroupName: 'Storagerg'
-              backendAzureRmStorageAccountName: 'storageaccount5591'
-              backendAzureRmContainerName: 'tfstate'
-              backendAzureRmKey: 'devpipeline.terraform.tfstate'
-          - task: TerraformTaskV4@4
-            inputs:
-              provider: 'azurerm'
-              command: 'validate'
-  - stage: tfdeploy
-    condition:  succeeded('tfvalidate')
-    dependsOn:  tfvalidate
-    jobs:
-      - job:  apply
+    - stage: tfdestroy
+      jobs:
+      - job:  destroy
         steps:
           - task: TerraformInstaller@1
             inputs:
@@ -61,6 +38,6 @@ stages:
           - task: TerraformTaskV4@4
             inputs:
               provider: 'azurerm'
-              command: 'apply'
+              command: 'destroy'
               environmentServiceNameAzureRM: 'myfirstserviceconnection'
 
