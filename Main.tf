@@ -7,12 +7,21 @@ resource "azurerm_resource_group" "rg" {
   location = "East US"
 }
 
+data "azurerm_key_vault" "key" {
+  name         = "firstkeyvault5591 "
+}
+
+data "azurerm_key_vault_secret" "keysecret" {
+  name         = "storagekey"
+  key_vault_id = azurerm_key_vault.key.id
+}
+
 terraform {
   backend "azurerm" {
     resource_group_name  = "Storagerg"
     storage_account_name = "storageaccount5591"
     container_name       = "tfstate"
     key                  = "devpipeline.terraform.tfstate"
-    access_key           = "9DcT8nW/iKr0v2t8bfFIfM24sfJRGva1oD4macMbw6UkSwUXYHJr0ErQzgv15oErzQebT6lpi4zl+ASt2Lfeeg=="
+    access_key           = data.azurerm_key_vault_secret.keysecret.value
   }
 }
