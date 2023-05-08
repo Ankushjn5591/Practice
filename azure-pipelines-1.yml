@@ -21,6 +21,11 @@ stages:
             inputs:
               provider: 'azurerm'
               command: 'init'
+              backendServiceArm: 'myfirstserviceconnection'
+              backendAzureRmResourceGroupName: 'storagerg'
+              backendAzureRmStorageAccountName: 'ankustorage5591'
+              backendAzureRmContainerName: 'terraform'
+              backendAzureRmKey: 'terraform.tfstate'
           - task: TerraformTaskV4@4
             inputs:
               provider: 'azurerm'
@@ -38,6 +43,11 @@ stages:
             inputs:
               provider: 'azurerm'
               command: 'init'
+              backendServiceArm: 'myfirstserviceconnection'
+              backendAzureRmResourceGroupName: 'storagerg'
+              backendAzureRmStorageAccountName: 'ankustorage5591'
+              backendAzureRmContainerName: 'terraform'
+              backendAzureRmKey: 'terraform.tfstate'
           - task: TerraformTaskV4@4
             inputs:
               provider: 'azurerm'
