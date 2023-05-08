@@ -25,7 +25,7 @@ stages:
               backendAzureRmResourceGroupName: 'storagerg'
               backendAzureRmStorageAccountName: 'ankustorage5591'
               backendAzureRmContainerName: 'terraform'
-              backendAzureRmKey: 'terraform.tfstate'
+              backendAzureRmKey: 'devpipeline.terraform.tfstate'
           - task: TerraformTaskV4@4
             inputs:
               provider: 'azurerm'
@@ -47,7 +47,7 @@ stages:
               backendAzureRmResourceGroupName: 'storagerg'
               backendAzureRmStorageAccountName: 'ankustorage5591'
               backendAzureRmContainerName: 'terraform'
-              backendAzureRmKey: 'terraform.tfstate'
+              backendAzureRmKey: 'devpipeline.terraform.tfstate'
           - task: TerraformTaskV4@4
             inputs:
               provider: 'azurerm'
