@@ -17,12 +17,5 @@ data "azurerm_key_vault_secret" "storage_access_key" {
   key_vault_id = azurerm_key_vault.key.id
 }
 
-terraform {
-  backend "azurerm" {
-    resource_group_name  = "Storagerg"
-    storage_account_name = "storageaccount5591"
-    container_name       = "tfstate"
-    key                  = "devpipeline.terraform.tfstate"
-    access_key           = "${var.output.access_key}"
-  }
-}
+
+  
