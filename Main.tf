@@ -1,4 +1,4 @@
-Provider "azurerm" {
+provider "azurerm" {
     features{}
 }
 
