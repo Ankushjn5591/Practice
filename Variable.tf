@@ -18,8 +18,5 @@ variable "subname"{
     description = "This is the subnet name"
 }
 
-variable "vmname"{
-    type = string
-    description = "This is the virtual machine name"
-}
+
 
