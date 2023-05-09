@@ -3,7 +3,7 @@ provider "azurerm" {
 }
 
 resource "azurerm_resource_group" "rg" {
-  name = "chhavirg"
+  name = "ankushrg"
   location = "East US"
 }
 
@@ -101,7 +101,7 @@ terraform {
     resource_group_name  = "Storagerg"
     storage_account_name = "storageaccount5591"
     container_name       = "tfstate"
-    key                  = "devpipeline.terraform.tfstate"
+    key                  = "vm1.terraform.tfstate"
     access_key = "9DcT8nW/iKr0v2t8bfFIfM24sfJRGva1oD4macMbw6UkSwUXYHJr0ErQzgv15oErzQebT6lpi4zl+ASt2Lfeeg=="
   }
 }
