@@ -1,3 +1,5 @@
+rgname   = "ankushrg"
+rglocation = "East US"
 vnetname = "vnet1"
 subname  = "subnet1"
 nsgname  = "nsg1"

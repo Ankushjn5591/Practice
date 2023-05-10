@@ -3,8 +3,8 @@ provider "azurerm" {
 }
 
 resource "azurerm_resource_group" "rg" {
-  name = "ankushrg"
-  location = "East US"
+  name = "${var.rgname}"
+  location = "${var.rglocation}"
 }
 
 resource "azurerm_virtual_network" "vnet" {
