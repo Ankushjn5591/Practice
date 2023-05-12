@@ -1,5 +1,5 @@
 rgname   = "lavirg"
-rglocation = "West US"
+rglocation = "West Europe"
 vnetname = "vnet3"
 subname  = "subnet3"
 nsgname  = "nsg3"
