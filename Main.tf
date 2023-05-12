@@ -9,14 +9,14 @@ resource "azurerm_resource_group" "rg" {
 
 resource "azurerm_virtual_network" "vnet" {
   name                = "${var.vnetname}"
-  address_space       = ["192.0.0.0/16"]
+  address_space       = ["172.0.0.0/16"]
   location            = azurerm_resource_group.rg.location
   resource_group_name = azurerm_resource_group.rg.name
 }
 
 resource "azurerm_subnet" "subnet" {
    name                = "${var.subname}"
-  address_prefixes     = ["192.0.0.0/24"]
+  address_prefixes     = ["172.0.0.0/24"]
   resource_group_name  = azurerm_resource_group.rg.name
   virtual_network_name = azurerm_virtual_network.vnet.name
 }
@@ -103,7 +103,7 @@ terraform {
     resource_group_name  = "Storagerg"
     storage_account_name = "storageaccount5591"
     container_name       = "tfstate"
-    key                  = "vm2.terraform.tfstate"
+    key                  = "vm3.terraform.tfstate"
     access_key = "9DcT8nW/iKr0v2t8bfFIfM24sfJRGva1oD4macMbw6UkSwUXYHJr0ErQzgv15oErzQebT6lpi4zl+ASt2Lfeeg=="
   }
 }
