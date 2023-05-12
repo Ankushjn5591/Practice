@@ -1,12 +1,12 @@
-rgname   = "lavirg"
-rglocation = "West Europe"
-vnetname = "vnet3"
-subname  = "subnet3"
-nsgname  = "nsg3"
-vmpip    = "pip3"
-vmnic    = "nic3"
-vmname   = "vm3"
-vmip     = "vm3ip"
+rgname   = "ankushrg"
+rglocation = "East US"
+vnetname = "vnet1"
+subname  = "subnet1"
+nsgname  = "nsg1"
+vmpip    = "pip1"
+vmnic    = "nic1"
+vmname   = "vm1"
+vmip     = "vm1ip"
 
 
 
