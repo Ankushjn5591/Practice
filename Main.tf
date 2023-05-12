@@ -51,17 +51,6 @@ resource "azurerm_network_security_group" "nsg" {
     destination_address_prefix = "*"
   }
 
-  security_rule {
-    name                       = "Block-Internet"
-    priority                   = 400
-    direction                  = "Outbound"
-    access                     = "Deny"
-    protocol                   = "Tcp"
-    source_port_range          = "*"
-    destination_port_range     = "*"
-    source_address_prefix      = "*"
-    destination_address_prefix = "Internet"
-  }
 }
 
 resource "azurerm_subnet_network_security_group_association" "nsgas" {
@@ -114,7 +103,7 @@ terraform {
     resource_group_name  = "Storagerg"
     storage_account_name = "storageaccount5591"
     container_name       = "tfstate"
-    key                  = "vm2.terraform.tfstate"
+    key                  = "vm1.terraform.tfstate"
     access_key = "9DcT8nW/iKr0v2t8bfFIfM24sfJRGva1oD4macMbw6UkSwUXYHJr0ErQzgv15oErzQebT6lpi4zl+ASt2Lfeeg=="
   }
 }
